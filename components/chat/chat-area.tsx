@@ -7,12 +7,13 @@ import { SourceList } from "@/components/chat/source-list";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
+import { Card, CardContent } from "../ui/card";
 
 type Props = {
   onOpenDocuments: () => void;
 };
 
-export function ChatArea({ onOpenDocuments }: Props) {
+export function ChatArea() {
   const [message, setMessage] = useState("");
 
   function handleSend() {
@@ -38,21 +39,13 @@ export function ChatArea({ onOpenDocuments }: Props) {
                 guidelines, SOPs, and more.
               </p>
             </div>
-
-            <button
-              type="button"
-              onClick={onOpenDocuments}
-              className="shrink-0 rounded-lg border px-3 py-2 text-xs text-blue-600 lg:hidden"
-            >
-              Documents
-            </button>
           </div>
 
           <Separator className="mt-5" />
         </div>
 
         <ScrollArea className="min-h-0 flex-1">
-          <div className="mx-auto w-full max-w-[850px] space-y-6 pb-6 pt-3">
+          <div className="mx-auto w-full max-w-[850px] space-y-6 pb-6 pt-3 pr-3 ">
             {/* User message */}
             <div className="flex justify-end gap-2">
               <div className="max-w-[85%] rounded-2xl rounded-tr-md bg-[#e4f0ff] px-4 py-3 text-sm leading-6 text-[#10294d] sm:max-w-[75%]">
@@ -78,8 +71,12 @@ export function ChatArea({ onOpenDocuments }: Props) {
               </Avatar>
 
               <div className="min-w-0 flex-1">
-                <AssistantResponse />
-                <SourceList />
+                <Card>
+                  <CardContent>
+                    <AssistantResponse />
+                    <SourceList />
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>

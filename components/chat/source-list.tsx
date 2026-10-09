@@ -8,7 +8,7 @@ export function SourceList() {
   const [expanded, setExpanded] = useState(true);
 
   return (
-    <section className="overflow-hidden rounded-b-xl border-x border-b border-slate-200 bg-white">
+    <section className="overflow-hidden border-t border-t-slate-200">
       <button
         type="button"
         onClick={() => setExpanded((value) => !value)}
@@ -28,7 +28,7 @@ export function SourceList() {
       </button>
 
       {expanded && (
-        <div className="space-y-2 border-t border-slate-100 p-3">
+        <div className="space-y-2">
           {sources.map((source) => (
             <SourceCard key={source.name} source={source} />
           ))}

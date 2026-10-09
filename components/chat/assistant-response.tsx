@@ -31,8 +31,7 @@ const criteria = [
 
 export function AssistantResponse() {
   return (
-    <Card className="border-slate-200 shadow-sm">
-      <CardContent className="p-4 sm:p-5">
+    <div className="p-4 sm:p-5">
         <p className="mb-4 text-sm leading-6 text-[#172f52]">
           A moderator should escalate a case when it meets any of the
           following criteria:
@@ -79,7 +78,6 @@ export function AssistantResponse() {
             10:24 AM
           </span>
         </div>
-      </CardContent>
-    </Card>
+      </div>
   );
 }

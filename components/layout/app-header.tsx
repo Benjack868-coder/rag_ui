@@ -42,10 +42,6 @@ export function AppHeader({
       </div>
 
       <div className="ml-auto flex items-center gap-1 sm:gap-3">
-        <Button variant="ghost" size="icon" className="hidden sm:inline-flex">
-          <Sun className="h-5 w-5" />
-        </Button>
-
         <Button variant="ghost" size="icon" className="relative">
           <Bell className="h-5 w-5" />
           <span className="absolute right-2 top-2 h-2 w-2 rounded-full bg-red-500" />
