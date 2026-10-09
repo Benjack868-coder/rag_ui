@@ -44,9 +44,7 @@ export default function AppLayout() {
         />
 
         <div className="flex min-h-0 flex-1">
-          <ChatArea
-            onOpenDocuments={() => setDocumentsOpen(true)}
-          />
+          <ChatArea/>
 
           {/* Desktop documents panel */}
           <aside className="hidden w-[380px] shrink-0 border-l border-slate-200 bg-white lg:flex">
