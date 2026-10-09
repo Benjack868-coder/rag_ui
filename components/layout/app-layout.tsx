@@ -55,14 +55,14 @@ export default function AppLayout() {
         </div>
       </div>
 
-      {/* Optional desktop sidebar collapse control */}
-      <button
+      {/* Optional desktop sidebar collapse control 
+        <button
         type="button"
         onClick={() => setSidebarCollapsed((value) => !value)}
         className="fixed bottom-4 left-4 z-20 hidden rounded-lg border bg-white px-3 py-2 text-xs shadow-sm lg:block"
       >
         {sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
-      </button>
+      </button>*/}
     </div>
   );
 }
